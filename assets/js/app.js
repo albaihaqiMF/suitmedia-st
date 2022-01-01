@@ -43,8 +43,14 @@ const validateEmail = (email) => {
 inputName.onchange = function () {
     if (inputName.value == "") {
         errorName.classList.remove('hidden');
+        errorName.innerHTML = "field name is required"
     } else {
-        errorName.classList.add('hidden');
+        if (inputName.value.length < 5) {
+            errorName.classList.remove('hidden');
+            errorName.innerHTML = "min 5 characters"
+        } else {
+            errorName.classList.add('hidden');
+        }
     }
 }
 
