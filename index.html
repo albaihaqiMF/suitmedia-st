@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="./assets//css/app.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <title>Front-End Intern | Suitmedia</title>
+</head>
+
+<body>
+    <nav class="w-full bg-white shadow-md">
+        <div class="w-full lg:w-5/6 lg:mx-auto flex justify-between">
+            <div id="label">
+                <h1 class="text-lg font-bold p-4">Company</h1>
+            </div>
+            <div x-data="{ dropdownOpen: false }" class="relative hidden sm:flex">
+                <a @mouseover="dropdownOpen = !dropdownOpen" class="relative z-10 block hover:bg-gray-100 transition duration-300 p-4">
+                    ABOUT
+                </a>
+
+                <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+
+                <div x-show="dropdownOpen" @mouseout="dropdownOpen = !dropdownOpen"
+                    class="absolute bg-white top-12 shadow z-20 transition-all duration-300">
+                    <a href="#"
+                        class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-gray-500 hover:text-white">
+                        HISTORY
+                    </a>
+                    <a href="#"
+                        class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-gray-500 hover:text-white">
+                        VISION MISSION
+                    </a>
+                </div>
+                <a href="#" class="p-4 hover:bg-gray-100 transition duration-300">OUR WORK</a>
+                <a href="#" class="p-4 hover:bg-gray-100 transition duration-300">OUR TEAM</a>
+                <a href="#" class="p-4 hover:bg-gray-100 transition duration-300">CONTACT</a>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="w-full relative lg:max-h-screen overflow-hidden">
+
+            <div class="mySlides fade h-96">
+                <img src="./assets/images/bg.jpg" style="width:100%" class="object-cover">
+                <div class="text text-md lg:text-lg font-semibold">THIS IS PLACE WHERE TECHNOLOGY & CREATIVITY FUSED
+                    INTO DIGITAL
+                    CHRMISTRY</div>
+            </div>
+
+            <div class="mySlides fade h-96">
+                <img src="./assets/images/about-bg.jpg" style="width:100%" class="object-cover">
+                <div class="text text-md lg:text-lg font-semibold">WE DON'T HAVE THE BEST BUT WE HAVE THE GREATES TEAM
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+    </section>
+    <section>
+        <div class="w-3/4 mx-auto py-6">
+            <h1 class="w-full text-center font-bold text-lg mb-4">OUR VALUES</h1>
+            <div class="grid snap-x md:grid-cols-3 gap-3">
+                <div
+                    class="h-56 md:h-full text-white w-full bg-red-400 border-red-700 border-2 rounded shadow hover:shadow-lg transition duration-300 p-4 text-center flex flex-col gap-3 justify-center items-center">
+                    <img src="./assets/images/lightbulb-o.png" alt="innovative" class="h-10">
+                    <h1 class="font-semibold text-lg">INNOVATIVE</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam id maiores blanditiis temporibus.
+                        Commodi labore minus dolorem pariatur ipsam quod?</p>
+                </div>
+                <div
+                    class="h-56 md:h-full text-white w-full bg-green-400 border-green-700 border-2 rounded shadow hover:shadow-lg transition duration-300 p-4 text-center flex flex-col gap-3 justify-center items-center">
+                    <img src="./assets/images/bank.png" alt="loyalty" class="h-10">
+                    <h1 class="font-semibold text-lg">LOYALTY</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam id maiores blanditiis temporibus.
+                        Commodi labore minus dolorem pariatur ipsam quod?</p>
+                </div>
+                <div
+                    class="h-56 md:h-full text-white w-full bg-blue-400 border-blue-700 border-2 rounded shadow hover:shadow-lg transition duration-300 p-4 text-center flex flex-col gap-3 justify-center items-center">
+                    <img src="./assets/images/balance-scale.png" alt="respect" class="h-10">
+                    <h1 class="font-semibold text-lg">RESPECT</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam id maiores blanditiis temporibus.
+                        Commodi labore minus dolorem pariatur ipsam quod?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="w-3/4 mx-auto py-6">
+            <h1 class="w-full text-center font-bold text-lg mb-4">CONTACT US</h1>
+            <div class="md:w-2/3 lg:w-1/2 w-full mx-auto">
+                <div class="text-gray-700 p-2 mb-4">
+                    <label class="block mb-1 text-lg" for="name">Name</label>
+                    <input
+                        class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg outline-none focus:ring ring-blue-500"
+                        type="text" name="name" placeholder="Name" id="name" autocomplete="off" />
+                </div>
+                <div class="text-gray-700 p-2 mb-4">
+                    <label class="block mb-1 text-lg" for="email">Email</label>
+                    <input
+                        class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg outline-none focus:ring ring-blue-500"
+                        type="email" name="email" placeholder="Email" id="email" autocomplete="off" />
+                </div>
+                <div class="text-gray-700 p-2 mb-4">
+                    <label class="block mb-1 text-lg" for="message">Message</label>
+                    <textarea
+                        class="w-full h-28 px-3 py-1 text-base placeholder-gray-600 border rounded-lg outline-none focus:ring ring-blue-500"
+                        type="text" name="message" placeholder="Message" id="message"></textarea>
+
+                </div>
+                <button
+                    class="w-full bg-sky-500 m-2 py-2 rounded text-white hover:bg-sky-600 hover:shadow-lg transition duration-300">SUBMIT</button>
+            </div>
+
+        </div>
+    </section>
+    <footer class="w-full bg-gray-800 text-white text-center py-6">
+        <p class="mb-1 text-sm">Copyright &copy 2016. PT Company</p>
+        <div id="sosial-media" class="w-full flex justify-center gap-3">
+            <img src="./assets/images/facebook-official.png" class="h-4" alt="facebook">
+            <img src="./assets//images/twitter.png" class="h-4" alt="twitter">
+        </div>
+    </footer>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
