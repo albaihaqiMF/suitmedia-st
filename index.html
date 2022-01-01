@@ -102,16 +102,22 @@
                     <input
                         class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg outline-none focus:ring ring-blue-500"
                         type="text" name="name" placeholder="Name" id="name" autocomplete="off" />
+                    <span id="nameError" class="hidden flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
+                        field name is required
+                    </span>
                 </div>
                 <div class="text-gray-700 p-2 mb-4">
                     <label class="block mb-1 text-lg" for="email">Email</label>
                     <input
                         class="w-full h-10 px-3 text-base placeholder-gray-600 border rounded-lg outline-none focus:ring ring-blue-500"
                         type="email" name="email" placeholder="Email" id="email" autocomplete="off" />
+                    <span id="emailError" class="hidden flex items-center font-medium tracking-wide text-red-500 text-xs mt-1 ml-1">
+                        field email is required
+                    </span>
                 </div>
                 <div class="text-gray-700 p-2 mb-4">
                     <label class="block mb-1 text-lg" for="message">Message</label>
-                    <textarea
+                    <textarea required
                         class="w-full h-28 px-3 py-1 text-base placeholder-gray-600 border rounded-lg outline-none focus:ring ring-blue-500"
                         type="text" name="message" placeholder="Message" id="message"></textarea>
 
